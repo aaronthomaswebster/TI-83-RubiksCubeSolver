@@ -1,0 +1,233 @@
+Lbl 3
+0->T
+If [B](3,2)=6
+T+1->T
+If [C](3,2)=6
+T+1->T
+If [D](3,2)=6
+T+1->T
+If [E](3,2)=6
+T+1->T
+If [F](1,2)=6
+T+1->T
+If [F](2,1)=6
+T+1->T
+If [F](2,3)=6
+T+1->T
+If [F](3,2)=6
+T+1->T
+If T=4
+Goto TT
+If [B](2,1)=4 and [B](2,3)=4 and [C](2,1)=1 and [C](2,3)=1 and [D](2,1)=3 and [D](2,3)=3 and [E](2,1)=2 and [E](2,3)=2
+Goto 45
+If [B](3,2)=4 and [F](1,2)=1
+Then
+	prgmY3
+	prgmB3
+	prgmY3
+	prgmRUBIKSB
+	prgmRUBIKSY
+	prgmRUBIKSR
+	prgmRUBIKSY
+	prgmR3
+	Goto 3
+End
+If [F](1,2)=2 and [B](3,2)=4
+Then
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmY3
+	prgmR3
+	prgmY3
+	prgmRUBIKSR
+	Goto 3
+End
+If [C](3,2)=1
+Then
+	If [F](2,3)=4
+	Then
+		prgmRUBIKSY
+		prgmRUBIKSR
+		prgmRUBIKSY
+		prgmR3
+		prgmY3
+		prgmB3
+		prgmY3
+		prgmRUBIKSB
+		Goto 3
+	End
+	If [F](2,3)=3
+	Then
+		prgmY3
+		prgmO3
+		prgmY3
+		prgmRUBIKSO
+		prgmRUBIKSY
+		prgmRUBIKSB
+		prgmRUBIKSY
+		prgmB3
+		Goto 3
+	End
+End
+If [D](3,2)=3
+Then
+	If [F](3,2)=1
+	Then
+		prgmRUBIKSY
+		prgmRUBIKSB
+		prgmRUBIKSY
+		prgmB3
+		prgmY3
+		prgmO3
+		prgmY3
+		prgmRUBIKSO
+		Goto 3
+	End
+	If [F](3,2)=2
+	Then
+		prgmY3
+		prgmG3
+		prgmY3
+		prgmRUBIKSG
+		prgmRUBIKSY
+		prgmRUBIKSO
+		prgmRUBIKSY
+		prgmO3
+		Goto 3
+	End
+End
+If [E](3,2)=2
+Then
+	If [F](2,1)=3
+	Then
+		prgmRUBIKSY
+		prgmRUBIKSO
+		prgmRUBIKSY
+		prgmO3
+		prgmY3
+		prgmG3
+		prgmY3
+		prgmRUBIKSG
+		Goto 3
+	End
+	If [F](2,1)=4
+	Then
+		prgmY3
+		prgmR3
+		prgmY3
+		prgmRUBIKSR
+		prgmRUBIKSY
+		prgmRUBIKSG
+		prgmRUBIKSY
+		prgmG3
+		Goto 3
+	End
+End
+If [B](3,2)=1 and [F](1,2)!=6
+Then
+	prgmRUBIKSY
+	Goto 3
+End
+If [B](3,2)=2 and [F](1,2)!=6
+Then
+	prgmY3
+	Goto 3
+End
+If [B](3,2)=3 and [F](1,2)!=6
+Then
+	prgmY2
+	Goto 3
+End
+If [C](3,2)=2 and [F](2,3)!=6
+Then
+	prgmY2
+	Goto 3
+End
+If [C](3,2)=3 and [F](2,3)!=6
+Then
+	prgmRUBIKSY
+	Goto 3
+End
+If [C](3,2)=4 and [F](2,3)!=6
+Then
+	prgmY3
+	Goto 3
+End
+If [D](3,2)=1 and [F](3,2)!=6
+Then
+	prgmY3
+	Goto 3
+End
+If [D](3,2)=2 and [F](3,2)!=6
+Then
+	prgmRUBIKSY
+	Goto 3
+End
+If [D](3,2)=4 and [F](3,2)!=6
+Then
+	prgmY2
+	Goto 3
+End
+If [E](3,2)=1 and [F](2,1)!=6
+Then
+	prgmY2
+	Goto 3
+End
+If [E](3,2)=3 and [F](2,1)!=6
+Then
+	prgmY3
+	Goto 3
+End
+If [E](3,2)=4 and [F](2,1)!=6
+Then
+	prgmRUBIKSY
+	Goto 3
+End
+Lbl TT
+If [B](2,1)!=4 or [E](2,3)!=2
+Then
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmY3
+	prgmR3
+	prgmY3
+	prgmRUBIKSR
+	Goto 3
+End
+If [C](2,1)!=1 or [B](2,3)!=4
+Then
+	prgmRUBIKSR
+	prgmRUBIKSY
+	prgmR3
+	prgmY3
+	prgmB3
+	prgmY3
+	prgmRUBIKSB
+	Goto 3
+End
+If [D](2,1)!=3 or [C](2,3)!=1
+Then
+	prgmRUBIKSB
+	prgmRUBIKSY
+	prgmB3
+	prgmY3
+	prgmO3
+	prgmY3
+	prgmRUBIKSO
+	Goto 3
+End
+If [E](2,1)!=2 or [D](2,3)!=3
+Then
+	prgmRUBIKSO
+	prgmRUBIKSY
+	prgmO3
+	prgmY3
+	prgmG3
+	prgmY3
+	prgmRUBIKSG
+	Goto 3
+End
+Lbl 45

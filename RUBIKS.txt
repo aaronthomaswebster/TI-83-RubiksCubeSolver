@@ -1,0 +1,370 @@
+:"RUBIKS
+AxesOff
+FnOff 
+0->dim(|LF)
+Lbl Q9
+0->dim(|LA)
+AxesOff
+1->W
+For(A,1,5)
+	":"->Str1
+End
+1->L1(1)
+1->L1(2)
+1->L1(3)
+L1->L2
+L2->L3
+L3->L4
+L4->L5
+L5->L6
+0->Xmin
+0->Ymin
+94->Xmax
+62->Ymax
+ClrDraw
+ClrHome
+[[1,1,1][1,1,1][1,1,1]]->[A]
+[A]->[B]
+[A]->[C]
+[A]->[D]
+[A]->[E]
+[A]->[F]
+Goto 2R
+Lbl 1R
+Disp "SORRY YOU TYPED","IN THE WRONG","COLOR, TRY AGAIN"
+Pause 
+ClrHome
+Lbl 2R
+Line(70,51,70,19
+Line(76,57,76,25
+Line(62,11,81,30
+Line(81,62,81,30
+Line(62,33,81,52
+Line(62,21,81,40
+
+Line(21,43,62,43
+Line(62,43,62,11
+Line(62,11,21,11
+Line(21,11,21,43
+Line(21,33,62,33
+Line(62,21,21,21
+Line(33,11,33,43
+Line(48,11,48,43
+Line(33,43,52,62
+Line(48,43,67,62
+Line(81,62,62,43
+Line(70,51,29,51
+Line(40,62,81,62
+Line(40,62,21,43
+Line(35,57,76,57
+Lbl 1
+For(A,1,6)
+	If A=1
+	Then
+		Text(61-40,24,1
+		Text(61-40,37,2
+		Text(61-40,52,3
+		Text(61-30,52,4
+		Text(61-17,52,5
+		Text(61-17,37,6
+		Text(61-17,24,7
+		Text(61-30,24,8
+		Text(30,36,"W
+		Text(61-56,48,"R
+		Pause 
+	End
+	If A=2
+	Then
+		Text(30,36,"R
+		Text(61-56,48,"w
+		Pause 
+	End
+	If A=3
+	Then
+		Text(30,36,"B
+		Text(61-56,48,"w
+		Pause 
+	End
+	If A=4
+	Then
+		Text(30,36,"O
+		Text(61-56,48,"w
+		Pause 
+	End
+	If A=5
+	Then
+		Text(30,36,"G
+		Text(61-56,48,"w
+		Pause 
+	End
+	If A=6
+	Then
+		Text(30,36,"Y
+		Text(61-56,48,"R
+		Pause 
+	End
+	For(B,1,8)
+		If B=1
+		Menu("  1  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"Redo",Q9
+		If B=2
+		Menu("  2  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"Redo",Q9
+		If B=3
+		Menu("  3  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"redo",Q9
+		If B=4
+		Menu("  4  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"Redo",Q9
+		If B=5
+		Menu("  5  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"Redo",Q9
+		If B=6
+		Menu("  6  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"Redo",Q9
+		If B=7
+		Menu("  7  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"Redo",Q9
+		If B=8
+		Menu("  8  ","Red",11,"Yellow",12,"White",13,"Orange",14,"Green",15,"Blue",16,"Redo",Q9
+		Lbl 11
+		4->C
+		Goto 17
+		Lbl 12
+		6->C
+		Goto 17
+		Lbl 13
+		5->C
+		Goto 17
+		Lbl 14
+		3->C
+		Goto 17
+		Lbl 15
+		2->C
+		Goto 17
+		Lbl 16
+		1->C
+		Lbl 17
+		If A=1
+		Then
+			5->[A](2,2)
+			If B=1
+			C->[A](1,1)
+			If B=2
+			C->[A](1,2)
+			If B=3
+			C->[A](1,3
+			If B=4
+			C->[A](2,3
+			If B=5
+			C->[A](3,3
+			If B=6
+			C->[A](3,2
+			If B=7
+			C->[A](3,1
+			If B=8
+			C->[A](2,1
+		End
+		If A=2
+		Then
+			4->[B](2,2)
+			If B=1
+			C->[B](1,1)
+			If B=2
+			C->[B](1,2)
+			If B=3
+			C->[B](1,3
+			If B=4
+			C->[B](2,3
+			If B=5
+			C->[B](3,3
+			If B=6
+			C->[B](3,2
+			If B=7
+			C->[B](3,1
+			If B=8
+			C->[B](2,1
+		End
+		If A=3
+		Then
+			1->[C](2,2)
+			If B=1
+			C->[C](1,1)
+			If B=2
+			C->[C](1,2)
+			If B=3
+			C->[C](1,3
+			If B=4
+			C->[C](2,3
+			If B=5
+			C->[C](3,3
+			If B=6
+			C->[C](3,2
+			If B=7
+			C->[C](3,1
+			If B=8
+			C->[C](2,1
+		End
+		If A=4
+		Then
+			3->[D](2,2)
+			If B=1
+			C->[D](1,1)
+			If B=2
+			C->[D](1,2)
+			If B=3
+			C->[D](1,3
+			If B=4
+			C->[D](2,3
+			If B=5
+			C->[D](3,3
+			If B=6
+			C->[D](3,2
+			If B=7
+			C->[D](3,1
+			If B=8
+			C->[D](2,1
+		End
+		If A=5
+		Then
+			2->[E](2,2)
+			If B=1
+			C->[E](1,1)
+			If B=2
+			C->[E](1,2)
+			If B=3
+			C->[E](1,3
+			If B=4
+			C->[E](2,3
+			If B=5
+			C->[E](3,3
+			If B=6
+			C->[E](3,2
+			If B=7
+			C->[E](3,1
+			If B=8
+			C->[E](2,1
+		End
+		If A=6
+		Then
+			6->[F](2,2)
+			If B=1
+			C->[F](1,1)
+			If B=2
+			C->[F](1,2)
+			If B=3
+			C->[F](1,3
+			If B=4
+			C->[F](2,3
+			If B=5
+			C->[F](3,3
+			If B=6
+			C->[F](3,2
+			If B=7
+			C->[F](3,1
+			If B=8
+			C->[F](2,1
+		End
+	End
+End
+0->A
+0->B
+0->C
+0->D
+0->E
+0->F
+For(I,1,3)
+	For(J,1,3)
+		If [A](I,J)=1
+		A+1->A
+		If [B](I,J)=1
+		A+1->A
+		If [C](I,J)=1
+		A+1->A
+		If [D](I,J)=1
+		A+1->A
+		If [E](I,J)=1
+		A+1->A
+		If [F](I,J)=1
+		A+1->A
+		If [A](I,J)=2
+		B+1->B
+		If [B](I,J)=2
+		B+1->B
+		If [C](I,J)=2
+		B+1->B
+		If [D](I,J)=2
+		B+1->B
+		If [E](I,J)=2
+		B+1->B
+		If [F](I,J)=2
+		B+1->B
+		If [A](I,J)=3
+		C+1->C
+		If [B](I,J)=3
+		C+1->C
+		If [C](I,J)=3
+		C+1->C
+		If [D](I,J)=3
+		C+1->C
+		If [E](I,J)=3
+		C+1->C
+		If [F](I,J)=3
+		C+1->C
+		If [A](I,J)=4
+		D+1->D
+		If [B](I,J)=4
+		D+1->D
+		If [C](I,J)=4
+		D+1->D
+		If [D](I,J)=4
+		D+1->D
+		If [E](I,J)=4
+		D+1->D
+		If [F](I,J)=4
+		D+1->D
+		If [A](I,J)=5
+		E+1->E
+		If [B](I,J)=5
+		E+1->E
+		If [C](I,J)=5
+		E+1->E
+		If [D](I,J)=5
+		E+1->E
+		If [E](I,J)=5
+		E+1->E
+		If [F](I,J)=5
+		E+1->E
+		If [A](I,J)=6
+		F+1->F
+		If [B](I,J)=6
+		F+1->F
+		If [C](I,J)=6
+		F+1->F
+		If [D](I,J)=6
+		F+1->F
+		If [E](I,J)=6
+		F+1->F
+		If [F](I,J)=6
+		F+1->F
+	End
+End
+If A=B and B=C and C=D and D=E and E=F and F=A
+Goto KJ
+Goto 1R
+Lbl KJ
+0->dim(|LA)
+1->W
+prgmRUBIKS3
+ClrHome
+Disp "30/100
+prgmRUBIKS4
+prgmRUBIKS2
+prgmRUBIKS5
+prgmRUBIKS2
+ClrHome
+Pause "SOLVED"
+DelVar [A]
+DelVar [B]
+DelVar [C]
+DelVar [D]
+DelVar [E]
+DelVar [F]
+DelVar L1
+DelVar L2
+DelVar L3
+DelVar |LF
+DelVar Str1

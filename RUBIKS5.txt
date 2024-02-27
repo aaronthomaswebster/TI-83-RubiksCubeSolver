@@ -1,0 +1,309 @@
+ClrHome
+Disp "40/100"
+Lbl 1
+If [F](1,2)=[F](2,1) and [F](2,1)=[F](3,2) and [F](3,2)=[F](2,3)
+Goto 2
+If [B](3,2)=6 and [E](3,2)=6
+Then
+	prgmRUBIKSR
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmY3
+	prgmG3
+	prgmR3
+	Goto 1
+End
+If [B](3,2)=6 and [D](3,2)=6
+Then
+	prgmRUBIKSR
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmY3
+	prgmR3
+	Goto 1
+End
+prgmRUBIKSY
+Goto 1
+Lbl 2
+If [B](3,1)=6 and [C](3,3)=6 and [F](3,1)=6 and [F](1,3)=6
+Then
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmY2
+	prgmG3
+End
+If [B](3,1)=6 and [B](3,3)=6 and [F](3,1)=6 and [F](3,3)=6
+Then
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmY2
+	prgmG3
+End
+If [B](3,3)=6 and [D](3,1)=6 and [F](1,1)=6 and [F](3,1)=6
+Then
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmY2
+	prgmG3
+End
+If [B](3,3)=6 and [C](3,3)=6 and [D](3,3)=6 and [F](1,1)=6
+Then
+	prgmB3
+	prgmY3
+	prgmRUBIKSB
+	prgmY3
+	prgmB3
+	prgmY2
+	prgmRUBIKSB
+End
+If [B](3,1)=6 and [E](3,1)=6 and [D](3,1)=6 and [F](1,3)=6
+Then
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmY2
+	prgmG3
+End
+If [B](3,1)=6 and [C](3,1)=6 and [C](3,3)=6 and [D](3,3)=6
+Then
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmY2
+	prgmG3
+End
+If [C](3,1)=6 and [C](3,3)=6 and [E](3,1)=6 and [E](3,3)=6
+Then
+	prgmRUBIKSG
+	prgmRUBIKSY
+	prgmG3
+	prgmRUBIKSY
+	prgmRUBIKSG
+	prgmY2
+	prgmG3
+End
+If [F](1,1)=6 and [F](1,3)=6 and [F](3,1)=6 and [F](3,3)=6
+Then
+	Goto XX
+End
+prgmRUBIKSY
+Goto 2
+Lbl XX
+ClrHome
+Disp "80/100"
+Lbl 6
+If [B](3,1)=[B](3,2) and [B](3,2)=[B](3,3) and [C](3,1)=[C](3,2) and [C](3,2)=[C](3,3) and [D](3,1)=[D](3,2) and [D](3,2)=[D](3,3) and [E](3,1)=[E](3,2) and [E](3,2)=[E](3,3)
+Goto 99
+If [B](3,1)=[B](3,3) and [C](3,1)!=[C](3,3)
+Goto MB
+If [C](3,1)=[C](3,3) and [B](3,1)!=[B](3,3)
+Goto MC
+If [D](3,1)=[D](3,3) and [B](3,1)!=[B](3,3)
+Goto MD
+If [E](3,1)=[E](3,3) and [C](3,1)!=[C](3,3)
+Goto ME
+If [B](3,1)=[B](3,2) and [B](3,2)=[B](3,3)
+Then
+	If [D](3,2)=[C](3,1)
+	3->T
+	If [D](3,2)=[E](3,1)
+	1->T
+	Goto T1
+End
+If [C](3,1)=[C](3,2) and [C](3,2)=[C](3,3)
+Then
+	If [E](3,2)=[B](3,1)
+	1->T
+	If [E](3,2)=[D](3,1)
+	3->T
+	Goto T2
+End
+If [D](3,3)=[D](3,2) and [D](3,2)=[D](3,1)
+Then
+	If [B](3,2)=[C](3,1)
+	1->T
+	If [B](3,2)=[E](3,1)
+	3->T
+	Goto T3
+End
+If [E](3,1)=[E](3,2) and [E](3,2)=[E](3,3)
+Then
+	If [C](3,2)=[B](3,1)
+	3->T
+	If [C](3,2)=[D](3,1)
+	1->T
+	Goto T4
+End
+If [B](3,1)=[B](3,3) and [C](3,1)=[C](3,3) and [D](3,1)=[D](3,3) and [E](3,1)=[E](3,3)
+Then
+	1->T
+	Goto T1
+End
+Goto MB
+Lbl T1
+prgmO2
+If T=1 or T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmB3
+prgmRUBIKSG
+prgmO2
+prgmRUBIKSB
+prgmG3
+If T=1 or T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmO2
+Goto 6
+Lbl T2
+prgmG2
+If T=3 or T=1
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmRUBIKSR
+prgmO3
+prgmG2
+prgmR3
+prgmRUBIKSO
+If T=3 or T=1
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmG2
+Goto 6
+Lbl T3
+prgmR2
+If T=3 or T=1
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmG3
+prgmRUBIKSB
+prgmR2
+prgmRUBIKSG
+prgmB3
+If T=3 or T=1
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmR2
+Goto 6
+Lbl T4
+prgmB2
+If T=3 or T=1
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmRUBIKSO
+prgmR3
+prgmB2
+prgmO3
+prgmRUBIKSR
+If T=3 or T=1
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+If T=3
+prgmRUBIKSY
+prgmB2
+Goto 6
+Lbl T5
+prgmB3
+prgmRUBIKSO
+prgmB3
+prgmR2
+prgmRUBIKSB
+prgmO3
+prgmB3
+prgmR2
+prgmB2
+Goto 6
+Lbl MC
+prgmB2
+prgmR2
+prgmRUBIKSB
+prgmRUBIKSO
+prgmB3
+prgmR2
+prgmRUBIKSB
+prgmO3
+prgmRUBIKSB
+Goto 6
+Lbl MB
+prgmR2
+prgmG2
+prgmRUBIKSR
+prgmRUBIKSB
+prgmR3
+prgmG2
+prgmRUBIKSR
+prgmB3
+prgmRUBIKSR
+Goto 6
+Lbl ME
+prgmG2
+prgmO2
+prgmRUBIKSG
+prgmRUBIKSR
+prgmG3
+prgmO2
+prgmRUBIKSG
+prgmR3
+prgmRUBIKSG
+Goto 6
+Lbl MD
+prgmO2
+prgmB2
+prgmRUBIKSO
+prgmRUBIKSG
+prgmO3
+prgmB2
+prgmRUBIKSO
+prgmG3
+prgmRUBIKSO
+Goto 6
+Lbl 99
+If [B](3,2)=1
+Then
+	prgmRUBIKSY
+End
+If [B](3,2)=2
+Then
+	prgmY3
+End
+If [B](3,2)=3
+Then
+	prgmY2
+End
+Lbl EX
